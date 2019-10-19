@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import entities.Product;
-import util.PriceUpdate;
 
 public class Program {
 
@@ -18,8 +17,8 @@ public class Program {
 		
 		showProduct(list);
 		
-		list.forEach(new PriceUpdate());
-		
+		//list.forEach(new PriceUpdate());
+		list.forEach(Product::staticPriceUpdate);
 		showProduct(list);
 	}
 	public static void showProduct(List<Product> list) {
