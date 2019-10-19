@@ -19,13 +19,11 @@ public class Program {
 		showProduct(list);
 		
 		double factor = 1.1;
-		Consumer<Product> cons = p -> {
-			p.setPrice(p.getPrice() * factor);
-		};
+		
 		//list.forEach(new PriceUpdate());
 		//list.forEach(Product::staticPriceUpdate);
 		//list.forEach(Product::nonStaticPriceUpdate);
-		list.forEach(cons);
+		list.forEach(p -> p.setPrice(p.getPrice() * factor));
 		showProduct(list);
 	}
 	public static void showProduct(List<Product> list) {
