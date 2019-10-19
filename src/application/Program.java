@@ -18,7 +18,8 @@ public class Program {
 		showProduct(list);
 		
 		//list.forEach(new PriceUpdate());
-		list.forEach(Product::staticPriceUpdate);
+		//list.forEach(Product::staticPriceUpdate);
+		list.forEach(Product::nonStaticPriceUpdate);
 		showProduct(list);
 	}
 	public static void showProduct(List<Product> list) {
